@@ -1,0 +1,191 @@
+/* General Styles */
+html, body {
+    min-height: 100%;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #e5ddd5;
+    padding: 0;
+    margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Centered Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    margin: 6% auto;
+    width: 40%;
+    font-weight: bold;
+    color: #fff;
+    background-color: #075e54;
+    opacity: 0.95;
+    border: 1px solid #004d40;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+/* Title */
+.title {
+    margin: 4% 0;
+    font-size: 44px;
+    letter-spacing: 8px;
+    color: #25d366;
+    font-family: "Rampart One", cursive;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Data of Group */
+.dataofgrp {
+    margin: 4% 0;
+    font-size: 34px;
+    letter-spacing: 3px;
+    color: #25d366;
+    font-family: "Rampart One", cursive;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Form Styles */
+form {
+    box-shadow: 0 2px 8px rgba(0, 121, 107, 0.8);
+    padding: 25px;
+    margin: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    animation: popIn 0.5s ease-in-out;
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+input, textarea {
+    width: calc(100% - 18px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #075e54;
+    outline: none;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #25d366;
+    box-shadow: 0 0 5px rgba(37, 211, 102, 0.5);
+}
+
+input[type="text"] {
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* Button */
+#button {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    background-color: #25d366;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#button:hover {
+    background-color: #128c7e;
+    transform: scale(1.05);
+}
+
+/* Headings */
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+    font-weight: bold;
+    text-align: center;
+    color: #075e54;
+}
+
+/* Boxhead */
+.boxhead {
+    font-weight: 400;
+    color: #075e54;
+    margin: 0 0 20px;
+}
+
+/* Div Block Display */
+div {
+    display: block;
+}
+
+/* Info */
+.info {
+    padding: 2%;
+    background-color: #128c7e;
+    color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Message */
+.message {
+    color: #128c7e;
+}
+
+/* Name and Date */
+.name, .date {
+    color: #075e54;
+}
+
+/* Custom Button */
+#button {
+    color: #ffffff;
+    background-color: #25d366;
+}
+
+/* Message Input */
+#message {
+    background-color: #f0f0f0;
+    border: 1px solid #075e54;
+    color: #333;
+}

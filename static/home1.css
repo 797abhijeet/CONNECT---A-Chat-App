@@ -1,0 +1,107 @@
+/* General Styles */
+html, body {
+    min-height: 100%;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #e5ddd5; /* Light background */
+    padding: 0;
+    margin: 0;
+}
+
+/* Title */
+.title {
+    margin-left: 40%;
+    margin-top: 4%;
+    font-size: 44px;
+    letter-spacing: 8px;
+    color: #128c7e; /* Greenish color */
+    font-family: "Rampart One", cursive;
+}
+
+/* Input and Textarea Styles */
+input, textarea {
+    width: calc(100% - 18px);
+    margin-bottom: 20px;
+    padding: 8px;
+    border: 1px solid #075e54; /* Light green border */
+    outline: none;
+    border-radius: 4px;
+    background-color: #ffffff; /* White background */
+    color: #333;
+}
+
+input[type="text"] {
+    font-size: 20px;
+    padding: 5px 4px;
+}
+
+/* Box Head */
+.boxhead {
+    font-weight: 400;
+    color: #075e54; /* Light green color */
+    margin: 0;
+}
+
+/* Form */
+form {
+    box-shadow: 0 2px 5px rgba(0, 121, 107, 0.8); /* Light green shadow */
+    padding: 25px;
+    margin: 25px;
+    background: #ffffff; /* White background */
+    border-radius: 8px;
+}
+
+/* Headings */
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+    font-weight: bold;
+    color: #075e54; /* Light green color */
+}
+
+/* Container */
+.container {
+    padding: 2%;
+    margin-left: 32%;
+    margin-top: 6%;
+    width: 40%;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff; /* White background */
+    opacity: 0.9;
+    border: 1px solid #000;
+}
+
+/* Div */
+div {
+    display: block;
+}
+
+/* Button */
+#button {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    background-color: #25d366; /* WhatsApp green */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#button:hover {
+    background-color: #128c7e; /* Darker green on hover */
+}
+
+/* Default text color */
+html, body {
+    color: #333;
+}
+
+/* Background color */
+body {
+    background-color: #e5ddd5; /* Light background */
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CONNECT</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/group1.css">
+    <link rel="icon" href="/static/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital@1&family=Rampart+One&display=swap" rel="stylesheet">
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1 class="dataofgrp"><strong>CONNECT-{{group}}</strong></h1>
+    <form action="/">
+        <div id="display">
+        </div>
+    </form>
+    
+    <script>
+        $(document).ready(function(){
+
+            setInterval(function(){
+            $.ajax({
+                type:'GET',
+                url:'/getMessages/{{group}}',
+                success: function(response){
+                    $('#display').empty();
+                    for(var key in response.messages)
+                    {
+                        var temp = "<br><div class='info'> <b>"+response.messages[key].user+"</b> <p>"+response.messages[key].msg+"</p> <span>1"+response.messages[key].date+"</span></div>";
+                        $('#display').append(temp);
+                    }
+                },
+                error: function(response){
+                    alert('An error occured');
+                }
+            });
+        },1000);
+        })
+    </script>
+
+    <form action="\" id="msg-form">
+        <div class="info2">
+            {% csrf_token %}
+            <input type="hidden" name="username" id="username" value="{{username}}"/>
+            <input type="hidden" name="group_id" id="group_id" value="{{group_details.id}}"/>
+            <input class="fname" type="text" name="message" id="message" placeholder="Message">
+            <input type="submit" id="button" value="Send message">
+        </div>
+    </form>
+</body>
+
+<script type="text/javascript">
+    $(document).on('submit','#msg-form',function(e){
+        e.preventDefault();
+        $.ajax({
+            type:'POST',
+            url:'/send',
+            data: {
+                username:$('#username').val(),
+                group_id:$('#group_id').val(),
+                message:$('#message').val(),
+                csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+            },
+
+            success: function(data){
+                //alert(data)
+            }
+        });
+
+        document.getElementById('message').value=""
+    });
+</script>
+
+
+</html>
